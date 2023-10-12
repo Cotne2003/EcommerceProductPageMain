@@ -22,7 +22,7 @@ export default function Carousel() {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative md:w-[445px]">
         <img
           src={
             image == 1
@@ -36,18 +36,18 @@ export default function Carousel() {
               : ""
           }
           alt=""
-          className="w-full"
+          className="w-full md:rounded-[15px]"
         />
         <img
           src={previus}
           alt=""
-          className="absolute top-[45%] left-4"
+          className="absolute top-[45%] left-4 md:hidden"
           onClick={imagePreviousChanger}
         />
         <img
           src={previus}
           alt=""
-          className="absolute rotate-180 top-[45%] right-4"
+          className="absolute rotate-180 top-[45%] right-4 md:hidden"
           onClick={imageNextChanger}
         />
       </div>

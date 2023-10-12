@@ -7,7 +7,11 @@ function App() {
   const [cartNotification, setCartNotification] = useState(0);
   return (
     <>
-      <Header numOfCouple={numOfCouple} cartNotification={cartNotification} />
+      <Header
+        numOfCouple={numOfCouple}
+        cartNotification={cartNotification}
+        setCartNotification={setCartNotification}
+      />
       <Main
         numOfCouple={numOfCouple}
         setNumOfCouple={setNumOfCouple}

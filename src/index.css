@@ -10,4 +10,12 @@ body {
 
 ul li {
   list-style: none;
+  font-style: normal;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 28px 30px 132px;
+  }
 }
