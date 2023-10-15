@@ -24,28 +24,28 @@ export default function Main(props: props) {
     }
   };
   return (
-    <main className="w-[375px] mx-auto md:mx-0 md:mt-[90px] md:flex md:justify-center md:w-full md:gap-[5%]">
+    <main className="w-[375px] mx-auto lg:mx-0 lg:mt-[90px] lg:flex lg:justify-center lg:w-full lg:gap-[50px] min-[1200px]:gap-[165px]">
       <section>
         <Carousel />
       </section>
-      <section className="pt-6 px-6 md:pt-0 md:px-0 md:w-[445px]">
-        <h3 className="text-[#FF7E1B] text-[12px] font-bold uppercase tracking-[1.846px] md:text-[13px] md:tracking-[2px]">
+      <section className="pt-6 px-6 lg:pt-0 lg:px-0 lg:w-[445px]">
+        <h3 className="text-[#FF7E1B] text-[12px] font-bold uppercase tracking-[1.846px] lg:text-[13px] lg:tracking-[2px]">
           Sneaker Company
         </h3>
-        <h2 className="text-[#1D2026] text-[28px] font-bold leading-8 mt-[19px] md:mt-[27px] md:text-[44px] md:leading-[48px]">
+        <h2 className="text-[#1D2026] text-[28px] font-bold leading-8 mt-[19px] lg:mt-[27px] lg:text-[44px] lg:leading-[48px]">
           Fall Limited Edition Sneakers
         </h2>
-        <p className="mt-[15px] text-[#69707D] leading-6 md:mt-[32px] md:text-[16px] md:leading-[26px]">
+        <p className="mt-[15px] text-[#69707D] leading-6 lg:mt-[32px] lg:text-[16px] lg:leading-[26px]">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <div className="flex items-center justify-between mt-7 md:flex-col md:items-start">
+        <div className="flex items-center justify-between mt-7 lg:flex-col lg:items-start">
           <div className="flex items-center gap-4">
             <span className="text-[#1D2026] text-[28px] font-bold">
               $125.00
             </span>
-            <span className="text-[#FF7E1B] pt-[7px] px-2 pb-1 bg-[#FFEEE2] rounded-md font-bold">
+            <span className="text-[#FF7E1B] pt-[7px] px-2 pb-1 bg-[#FFEEE2] rounded-lg font-bold">
               50%
             </span>
           </div>
@@ -53,16 +53,26 @@ export default function Main(props: props) {
             $250.00
           </span>
         </div>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-4">
-          <div className="flex justify-between items-center pt-[22px] pb-[18px] px-6 bg-[#F6F8FD] rounded-[10px] md:w-[40%]">
-            <img src={minus} alt="" onClick={minusNumOfCouple} />
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mt-[26px] lg:mt-8">
+          <div className="flex justify-between items-center px-6 bg-[#F6F8FD] rounded-[10px] lg:w-[40%]">
+            <div
+              className="h-14 flex items-center cursor-pointer"
+              onClick={minusNumOfCouple}
+            >
+              <img src={minus} alt="" />
+            </div>
             <span className="text-[#1D2026] text-base font-bold">
               {props.numOfCouple}
             </span>
-            <img src={plus} alt="" onClick={plusNumOfCouple} />
+            <div
+              className="h-14 flex items-center cursor-pointer"
+              onClick={plusNumOfCouple}
+            >
+              <img src={plus} alt="" onClick={plusNumOfCouple} />
+            </div>
           </div>
           <button
-            className="flex justify-center gap-4 items-center py-5 bg-[#FF7E1B] rounded-[10px] shadow-[0px_20px_50px_-20px_rgba(255,126,27,1)] md:w-[60%]"
+            className="flex justify-center gap-4 items-center py-5 bg-[#FF7E1B] rounded-[10px] shadow-[0px_20px_50px_-20px_rgba(255,126,27,1)] lg:w-[60%]"
             onClick={() => {
               props.setCartNotification(props.numOfCouple);
             }}
