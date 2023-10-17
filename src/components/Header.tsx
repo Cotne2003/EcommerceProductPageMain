@@ -69,12 +69,16 @@ export default function Header(props: props) {
             {props.cartNotification}
           </span>
         </div>
-        <img src={avatar} alt="avatar" className="w-6 lg:w-[50px]" />
+        <div className="ease-in-out duration-300 w-6 lg:w-[50px] cursor-pointer border-solid border-[3px] lg:hover:border-[#FF7E1B] rounded-[50%]">
+          <img src={avatar} alt="avatar" />
+        </div>
       </div>
       {cartClick ? (
         <CartInformation
           cartNotification={props.cartNotification}
           setCartNotification={props.setCartNotification}
+          cartClick={cartClick}
+          setCartClick={setCartClick}
         />
       ) : null}
     </header>

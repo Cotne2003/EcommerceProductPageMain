@@ -4,10 +4,17 @@ import remove from "/assets/icon-delete.svg";
 interface props {
   cartNotification: number;
   setCartNotification: (value: number) => void;
+  cartClick: boolean;
+  setCartClick: (value: boolean) => void;
 }
 
 export default function CartInformation(props: props) {
   const removeHandleClick = () => {
+    props.setCartNotification(0);
+  };
+
+  const checkoutHandleClick = () => {
+    props.setCartClick(!props.cartClick);
     props.setCartNotification(0);
   };
 
@@ -33,9 +40,17 @@ export default function CartInformation(props: props) {
                 </span>
               </p>
             </div>
-            <img src={remove} alt="" onClick={removeHandleClick} />
+            <img
+              src={remove}
+              alt=""
+              onClick={removeHandleClick}
+              className="cursor-pointer"
+            />
           </div>
-          <button className="w-full py-5 bg-[#FF7E1B] rounded-[10px] mt-6 text-[#fff] text-base">
+          <button
+            className="w-full py-5 bg-[#FF7E1B] rounded-[10px] mt-6 text-[#fff] text-base active:bg-[#FFAB6A]"
+            onClick={checkoutHandleClick}
+          >
             Checkout
           </button>
         </div>

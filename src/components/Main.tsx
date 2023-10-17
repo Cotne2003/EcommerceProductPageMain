@@ -72,7 +72,7 @@ export default function Main(props: props) {
             </div>
           </div>
           <button
-            className="flex justify-center gap-4 items-center py-5 bg-[#FF7E1B] rounded-[10px] shadow-[0px_20px_50px_-20px_rgba(255,126,27,1)] lg:w-[60%]"
+            className="flex justify-center gap-4 items-center py-5 bg-[#FF7E1B] rounded-[10px] shadow-[0px_20px_50px_-20px_rgba(255,126,27,1)] lg:w-[60%] active:bg-[#FFAB6A]"
             onClick={() => {
               props.setCartNotification(props.numOfCouple);
             }}
