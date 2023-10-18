@@ -25,9 +25,7 @@ export default function Header(props: props) {
 
   return (
     <header className="flex items-center justify-between pb-7 pt-5 px-6 relative lg:pt-0 lg:px-0 lg:pb-[0px] lg:border-solid lg:border-b-[1px]">
-      {menuClick === true ? (
-        <MobileMenu menuClick={menuClick} setMenuClick={setMenuClick} />
-      ) : null}
+      <MobileMenu menuClick={menuClick} setMenuClick={setMenuClick} />
       <div className="flex items-center gap-4 lg:gap-14">
         <img
           src={menuButton}

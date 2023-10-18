@@ -19,7 +19,7 @@ interface props {
 
 export default function ClickedCarousel(props: props) {
   return (
-    <div className="fixed inset-0 bg-[rgba(0,0,0,0.75)] flex justify-center items-center">
+    <div className="fixed inset-0 bg-[rgba(0,0,0,0.75)] flex justify-center items-center max-[1023px]:hidden">
       <div className="w-[550px] relative">
         <div className="flex justify-end mb-6">
           <img
